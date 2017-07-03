@@ -4,7 +4,8 @@
   "description": "test api for learning node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/shanedosullivan/nodeTestApi/issues"
   },
-  "homepage": "https://github.com/shanedosullivan/nodeTestApi#readme"
+  "homepage": "https://github.com/shanedosullivan/nodeTestApi#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
