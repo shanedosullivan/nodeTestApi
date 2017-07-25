@@ -5,6 +5,8 @@ var mongoose = require('mongoose'),
 
 var userService = require('../services/testListService');
 
+var flag = true;
+
 exports.list = function(req, res) {
 	UserMongoose.find({}, function(err, data) {
       if (err) {
@@ -51,3 +53,29 @@ exports.delete = function(req, res) {
     res.json({ message: 'User with id ' +req.params.userId+ ' successfully deleted' });
   });
 };
+
+var testPromise = new Promise(function (resolve, reject){
+
+		if(flag){
+			userService.promise();
+			var lyric = {
+            	    next: 'Tell Em What You Heard',
+               		afterThat: 'You Know Its Gonna Be Ok!'
+            	};
+         	resolve(lyric);
+         }else{
+         	reject(new Error("Error in the promise!"));
+         }
+	});
+
+exports.promise = function(req, res) {
+
+	testPromise.then(function (resolve) {
+            console.log(resolve);
+        })
+        .catch(function (error) {
+            console.log(error.message);
+        });
+	console.log("All Around The World");
+};
+

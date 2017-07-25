@@ -13,4 +13,7 @@ module.exports = function(app) {
    .get(testListController.get)
    .put(testListController.update)
    .delete(testListController.delete);
+
+  app.route('/promise')
+   .get(testListController.promise);
 };
