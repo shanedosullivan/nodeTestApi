@@ -13,9 +13,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var routes = require('./api/routes/testListRoute');
-routes(app);
+var listRoutes = require('./api/routes/testListRoute');
+var emailRoutes = require('./api/routes/emailRoute');
+listRoutes(app);
+emailRoutes(app);
 
 app.listen(port);
 
-console.log('test list RESTful API server started on: ' + port);
+console.log('RESTful API server started on: ' + port);

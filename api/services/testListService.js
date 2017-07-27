@@ -11,5 +11,5 @@ exports.save = function(user) {
 }
 
 exports.promise = function(){
-	console.log("Gotta Spread The Word");
+	console.log("Second");
 }

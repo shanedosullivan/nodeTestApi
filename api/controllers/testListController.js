@@ -59,8 +59,8 @@ var testPromise = new Promise(function (resolve, reject){
 		if(flag){
 			userService.promise();
 			var lyric = {
-            	    next: 'Tell Em What You Heard',
-               		afterThat: 'You Know Its Gonna Be Ok!'
+            	    next: 'Third',
+               		afterThat: 'Fourth'
             	};
          	resolve(lyric);
          }else{
@@ -76,6 +76,6 @@ exports.promise = function(req, res) {
         .catch(function (error) {
             console.log(error.message);
         });
-	console.log("All Around The World");
+	console.log("First");
 };
 
